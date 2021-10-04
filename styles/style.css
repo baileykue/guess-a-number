@@ -8,3 +8,8 @@ body {
 .letter {
     font-family: 'Reenie Beanie', cursive;
 }
+
+.hide {
+    display: none;
+}
+

@@ -1,30 +1,41 @@
 const button = document.getElementById('button');
+const replayButton = document.getElementById('play-again')
 const input = document.getElementById('input');
-const userGuess = input.value;
 let userMessage = document.getElementById('user-message');
-
 let correctNum = Math.floor(Math.random()*(20-1)+1);
 
 let guessesNum = 4;
+
+button.classList.remove('hide');
 
 button.addEventListener('click', () => {
   guessesNum--;
   console.log(guessesNum);
   console.log(correctNum);
-  Number(userGuess.value);
-  if (correctNum === userGuess) {
+  console.log(input.value);
+  if (correctNum === Number(input.value)) {
     userMessage.textContent = 'You are correct! Well done!';
+    replayButton.classList.remove('hide');
+    button.classList.add('hide');
   } else if (guessesNum === 0) {
     userMessage.textContent = 'You have lost! No more guesses for you';
-  } else if (userGuess > correctNum) {
+    replayButton.classList.remove('hide');
+    button.classList.add('hide');
+  } else if (Number(input.value) > correctNum) {
     userMessage.textContent = `Your guess is too high! You have ${guessesNum} 
     guesses left`;
-  } else if (userGuess < correctNum) {
+  } else if (Number(input.value) < correctNum) {
     userMessage.textContent = `Your guess is too low! you have ${guessesNum} 
     guesses left`;
   } 
-  /*else {
-    userMessage.textContent = 'Please Make sure you are entering a number between 1-20!';
-    guessesNum++;
-  }*/
+ 
+});
+
+replayButton.addEventListener('click', ()=> {
+  guessesNum = 4;
+  replayButton.classList.add('hide');
+  button.classList.remove('hide');
+  userMessage.textContent = '';
+  input.value = '';
+  location.reload(correctNum);
 })
