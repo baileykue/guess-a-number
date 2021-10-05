@@ -13,8 +13,7 @@ button.addEventListener('click', () => {
     if (numberCheck(input.value) !== true) { 
         return;
     }
-    console.log(guessesNum);
-
+    document.getElementById('input-error').innerHTML = "";
     guessesNum--;
     if (correctNum === Number(input.value)) {
         userMessage.textContent = 'You are correct! Well done!';

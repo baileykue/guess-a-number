@@ -1,8 +1,30 @@
 body {
-    margin: 25px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("../assets/lined_paper.jpeg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+}
+
+input {
+    background: transparent;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 45px;
+}
+
+h2 {
+    margin: 45px;
 }
 
 .letter {
@@ -13,3 +35,6 @@ body {
     display: none;
 }
 
+#button:hover{
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+ }
