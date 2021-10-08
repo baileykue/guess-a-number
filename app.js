@@ -5,6 +5,7 @@ let userMessage = document.getElementById('user-message');
 let correctNum = Math.floor(Math.random() * (20 - 1) + 1);
 const winSpan = document.getElementById('wins');
 const lossSpan = document.getElementById('losses');
+const computerGuess = document.getElementById('computer-guess');
 
 let wins = 0
 let losses = 0
@@ -31,6 +32,9 @@ button.addEventListener('click', () => {
         button.classList.add('hide');
         losses++;
         lossSpan.textContent = losses;
+        computerGuess.classList.remove('hide');
+        computerGuess.textContent = `The correct number was ${correctNum}`;
+
     } else if (Number(input.value) > correctNum) {
         userMessage.textContent = `Your guess is too high! You have ${guessesNum} 
     guesses left`;
