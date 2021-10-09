@@ -20,7 +20,9 @@ h1 {
 }
 
 p {
-    margin: 45px;
+    margin: 25px;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -37,4 +39,8 @@ h2 {
 
 #button:hover{
     background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+ }
+
+ button {
+    padding: 5px;
  }
