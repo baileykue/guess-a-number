@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
 
     <title>Guess The Number</title>
 </head>
@@ -21,12 +21,16 @@
     <header>
         <h1 class="letter">Guess The Number!</h1>
         <h2 class="letter">The computer will pick a random number between 1-20,
-            <br> you will have 4 guesses as to what it is!</h2>
-    </header> 
+            <br> you will have 4 guesses as to what it is!
+        </h2>
+    </header>
     <main>
         <input class="letter" id="input" placeholder="Enter Your Guess Here">
         <button class="letter hide" id="button">Submit</button>
         <button class="letter hide" id="play-again">Play Again?</button>
+        <p id="computer-guess" class="hide"></p>
+        <p>You have won: <span id="wins">0</span> times</p>
+        <p>You have lost: <span id="losses">0</span> times</p>
         <p class="letter" id="input-error"></p>
         <p class="letter" id="user-message"></p>
     </main>
